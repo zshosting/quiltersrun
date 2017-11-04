@@ -38,6 +38,9 @@ body {
  .custom-pink {
   background-color: #f61d72 !important;
 }
+ .custom-black {
+  background-color: #111111 !important;
+}
  .custom-purple {
   background-color: #9300b3 !important;
 }
@@ -59,28 +62,73 @@ body {
 
 .custom-pink-text {
   color: #f61d72 !important;
+  font-family: 'Kandal' !important;
+  font-weight: 900 !important;
+  font-style: italic !important;
 }
 .custom-purple-text {
   color: #9300b3 !important;
+  font-family: 'Kandal' !important;
+  font-weight: 900 !important;
+  font-style: italic !important;
 }
 .custom-red-text {
   color: #cd1408 !important;
+  font-family: 'Kandal' !important;
+  font-weight: 900 !important;
+  font-style: italic !important;
 }
 .custom-orange-text {
   color: #f07815 !important;
+  font-family: 'Kandal' !important;
+  font-weight: 900 !important;
+  font-style: italic !important;
 }
 .custom-yellow-text {
-  color: #d8940e !important;
+  color: #ffff2e !important;
+  font-family: 'Kandal' !important;
+  font-weight: 900 !important;
+  font-style: italic !important;
 }
 .custom-green-text {
   color: #8ec52d !important;
+  font-family: 'Kandal' !important;
+  font-weight: 900 !important;
+  font-style: italic !important;
 }
 .custom-blue-text {
   color: #376ab9 !important;
+  font-family: 'Kandal' !important;
+  font-weight: 900 !important;
+  font-style: italic !important;
+}
+.custom-white-text {
+  color: #ffffff !important;
+  font-family: 'Kandal' !important;
+  font-weight: 900 !important;
+  font-style: italic !important;
 }
 
 ::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); background-color: #F5F5F5; }
 ::-webkit-scrollbar { width: 10px; background-color: #F5F5F5; }
-::-webkit-scrollbar-thumb { background-color: #5d8a9d; }
-::-moz-selection { background: #5d8a9d; color: white; }
-::selection { background: #eec374; color: white; }
+::-webkit-scrollbar-thumb { background-color: #f61d72; }
+::-moz-selection { background: #f61d72; color: white; }
+::selection { background: #f61d72; color: white; }
+
+img.sponsorlogo {
+    -webkit-filter: grayscale(1);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+img.sponsorlogo:hover {
+    -webkit-filter: grayscale(0);
+    -moz-filter: grayscale(0);
+    -ms-filter: grayscale(0);
+    -o-filter: grayscale(0);
+    filter: grayscale(0);
+}
+
+
