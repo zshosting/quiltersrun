@@ -122,7 +122,6 @@ body {
 ::selection { background: #f61d72; color: white; }
 
 img.sponsorlogo {
-    -webkit-filter: grayscale(1);
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
     -ms-filter: grayscale(100%);
