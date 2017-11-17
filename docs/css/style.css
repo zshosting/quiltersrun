@@ -22,6 +22,12 @@
 body {
         background: url('../imgs/background.png') no-repeat center #111111; background-attachment:fixed;
     }
+	
+@media screen and (max-width: 600px){
+    body {
+        background: url('../imgs/background-small.png') no-repeat bottom right #082f3d; background-attachment:fixed;
+    }
+}
 
 @font-face {
 	font-family: 'Kandal';
@@ -39,7 +45,7 @@ body {
   background-color: #f61d72 !important;
 }
  .custom-black {
-  background-color: #111111 !important;
+  background-color: #333333 !important;
 }
  .custom-purple {
   background-color: #9300b3 !important;
@@ -135,5 +141,6 @@ img.sponsorlogo:hover {
     -o-filter: grayscale(0);
     filter: grayscale(0);
 }
+
 
 
