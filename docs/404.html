@@ -1,0 +1,108 @@
+<!doctype html>
+<html amp lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>404 - SOCAL Quilt Run</title>
+  <!-- CSS  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <link rel="stylesheet" href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- CSS  End -->
+  <!-- JS  -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+  <script type="text/javascript" src="../js/init.js"></script>
+  <!-- JS END  -->
+  <meta name="theme-color" content="#f61d72">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90328686-4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-90328686-4');
+  </script>
+ </head>
+<body>
+	<div class="navbar-fixed">
+    <nav class="custom-pink">
+      <div class="nav-wrapper" style="padding-left:5px;padding-right:5px;">
+        <div class="hide-on-med-and-down">
+			<div class="nav-wrapper" style="padding-left:5px;padding-right:5px;">
+				<a id="logo-container" href="index.html" style="font-family: 'Kandal'; font-weight: 900; font-style: italic;font-size: 14px;">2018 Southen California Quilter's Run</a>
+				<ul class="right">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="stores.html">Stores</a></li>
+				<li><a href="challenge.html">Challenge</a></li>
+				<li><a href="prizes.html">Prizes</a></li>
+			  </ul>
+		  </div>
+		</div>
+		<div class="hide-on-large-only">
+			<div class="nav-wrapper" style="padding-left:5px;padding-right:5px;">
+				<a id="logo-container" href="index.html" style="font-family: 'Kandal'; font-weight: 900; font-style: italic;font-size: 14px;"></a>
+				<ul class="right">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="stores.html">Stores</a></li>
+				<li><a href="challenge.html">Challenge</a></li>
+				<li><a href="prizes.html">Prizes</a></li>
+			  </ul>
+		  </div>
+		</div>
+      </div>
+    </nav>
+  </div>
+    <div class="container">
+		<div class="section">
+			<div class="section">
+				<div class="row">
+					<div class="col s12 m2"></div>
+					<div class="col s12 m8">
+						<div class="card custom-black">
+							<div class="card-content white-text">
+								<center>
+									<p style="font-size: 20px;"><span class="custom-pink-text">404</span></br><span class="custom-white-text">The site configured at this address does not contain the requested file.</br></br><span class="custom-white-text">Will redirect in <span id="countdown">10</span> seconds</span></span></p>
+									
+									<script type="text/javascript">
+										// Total seconds to wait
+										var seconds = 10;
+										
+										function countdown() {
+											seconds = seconds - 1;
+											if (seconds < 0) {
+												// Chnage your redirection link here
+												window.location = "http://quiltersrun.com";
+											} else {
+												// Update remaining seconds
+												document.getElementById("countdown").innerHTML = seconds;
+												// Count down using javascript
+												window.setTimeout("countdown()", 1000);
+											}
+										}
+										
+										// Run countdown function
+										countdown();
+										
+									</script>
+								</center>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<main></main>
+	<footer class="page-footer grey">
+        <div class="footer-copyright">
+            <div class="container">
+				<p class="left white-text">This website was made and is maintained by <a class="black-text" target="_blank" href="http://www.thequiltersfaire.com/">The Quilter's Faire</a>.</br>© 2017 The Quilter's Faire</p>
+				<p class="right white-text"><a class="black-text" href="../quiltshops.html">Quilt Store owner looking to join?</a></p>
+            </div>
+        </div>
+    </footer>
+  </body>
+</html>
