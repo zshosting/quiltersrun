@@ -8,12 +8,14 @@
   <!-- CSS  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
   <link rel="stylesheet" href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <link rel="stylesheet" href="../css/introjs.css" type="text/css" rel="stylesheet" media="screen,projection">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- CSS  End -->
   <!-- JS  -->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
   <script type="text/javascript" src="../js/init.js"></script>
+  <script type="text/javascript" src="../js/intro.js"></script>
   <!-- JS END  -->
   <meta name="theme-color" content="#f61d72">
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -25,8 +27,18 @@
 
     gtag('config', 'UA-90328686-4');
   </script>
+  <script type="text/javascript">
+	function checkPrizeCookieIntro(){
+	   var cookie=getCookie("prizeVisit");
+
+	   if (cookie==null || cookie=="") {
+		  setCookie("prizeVisit", "1",90);
+		  introJS().start();
+		  }
+	}
+  </script>
  </head>
-<body>
+<body onload="checkPrizeCookieIntro()">
 	<div class="navbar-fixed">
     <nav class="custom-pink">
       <div class="nav-wrapper" style="padding-left:5px;padding-right:5px;">
@@ -55,6 +67,7 @@
   </div>
     <div class="container">
 		<div class="section">
+			<a class="btn btn-large btn-success" href="javascript:void(0);" onclick="javascript:introJs().start();">Show me how</a>
 			<div class="row">
 						<div class="col s12 m3">
 						</div>
@@ -100,8 +113,8 @@
 							<div class="card-panel white">
 								<div class="card-content valign-wrapper" style="height: 125px;">
 									<center>
-										<img src="../imgs/gprizes/alexanderhenry.jpg" width="100%" class="materialboxed" alt="Alexander Henry Fabrics">	
-										<a target="_blank" href="http://www.ahfabrics.com/"><img src="../imgs/sponsors/alexanderhenry.png" width="100%" class="sponsorlogo" alt="Alexander Henry Fabrics"></a>										
+										<img data-step="1" data-intro="Click any prize image to make it bigger." src="../imgs/gprizes/alexanderhenry.jpg" width="100%" class="materialboxed" alt="Alexander Henry Fabrics">	
+										<a data-step="2" data-intro="Click any Manufacturer logo to visit their website." target="_blank" href="http://www.ahfabrics.com/"><img src="../imgs/sponsors/alexanderhenry.png" width="100%" class="sponsorlogo" alt="Alexander Henry Fabrics"></a>										
 									</center>
 								</div>
 							</div>
