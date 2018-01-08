@@ -52,11 +52,11 @@ function getCookie(cname) {
 }
 
 function checkCookie() {
-    var user=getCookie("prizesFirstVisit");
-    if (user != "") {
-        
+    var cookie=getCookie("prizesFirstVisit");
+    if (cookie != "") {
+        introJs().start();
     } else {
-       setCookie("prizesFirstVisit", user, 30);
+       setCookie("prizesFirstVisit", "yes", 30);
     }
 }
 
