@@ -27,18 +27,22 @@
 
     gtag('config', 'UA-90328686-4');
   </script>
-  <script type="text/javascript">
-	function checkPrizeCookieIntro(){
-	   var cookie=getCookie("prizeVisit");
+<script type="text/javascript">
+    $(document).ready(function() {
+        // check cookie
+        var visited = $.cookie("prizesVisited")
 
-	   if (cookie==null || cookie=="") {
-		  setCookie("prizeVisit", "1",90);
-		  introJS().start();
-		  }
-	}
-  </script>
+        if (visited == null) {
+            introJs().start();
+            alert($.cookie("prizesVisited"));         
+        }
+
+        // set cookie
+        $.cookie('prizesVisited', 'yes', { expires: 1, path: '/' });
+    });
+</script>
  </head>
-<body onload="checkPrizeCookieIntro()">
+<body>
 	<div class="navbar-fixed">
     <nav class="custom-pink">
       <div class="nav-wrapper" style="padding-left:5px;padding-right:5px;">
