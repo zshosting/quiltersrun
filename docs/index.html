@@ -149,7 +149,30 @@
 					<div class="col s12 m8">
 						<div class="card custom-black">
 							<div class="card-content white-text">
-								<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdTunCD5RqW1ukuIbJgArIK-sRwrr2WtvDRekTLUsaUQ-vOvw/viewform?embedded=true" width="100%" height="350" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+								<script type="text/javascript">var submitted=false;</script>
+								<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='http://quiltersrun.com/email-subscribed.html';}"></iframe>
+								<form class="col s12" action="https://docs.google.com/forms/d/e/1FAIpQLSdTunCD5RqW1ukuIbJgArIK-sRwrr2WtvDRekTLUsaUQ-vOvw/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+									<div class="row">
+										<h5>Subscribe to our E-mail</h5>
+									</div>									
+									<div class="row">
+										<div class="input-field col s12">
+											<i class="material-icons prefix">account_circle</i>
+										  <input type="text" class="validate" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-label="Enter your Full Name:" aria-describedby="i.desc.744465039 i.err.744465039" name="entry.1542253203" value="" required dir="auto" data-initial-dir="auto" data-initial-value=""/>
+										  <label for="name" data-success="" >Name</label>
+										</div>
+									</div>
+									<div class="row">
+										<div class="input-field col s12">
+										  <i class="material-icons prefix">email</i>
+										  <input type="email" class="validate" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-label="Enter your E-Mail address:" aria-describedby="i.desc.762773043 i.err.762773043" name="entry.91043636" value="" required dir="auto" data-initial-dir="auto" data-initial-value=""/>
+										  <label for="email" data-error="Please enter a valid email." data-success="">Email</label>
+										</div>
+									</div>
+									<div class="row">
+										<center><input type="submit" id="submit" class="btn btn-custom custom-pink" name="submit" value="Subscribe"></center>
+									</div>
+								</form>&nbsp;
 							</div>
 						</div>
 					</div>
