@@ -24,16 +24,19 @@
 
     gtag('config', 'UA-90328686-4');
   </script>
-  <!-- Hotjar Tracking Code for http://quiltersrun.com/ -->
   <script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:749050,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    /**
+    * Function that tracks a click on an outbound link in Analytics.
+    * This function takes a valid URL string as an argument, and uses that URL string
+    * as the event label. Setting the transport method to 'beacon' lets the hit be sent
+    * using 'navigator.sendBeacon' in browser that support it.
+    */
+    var trackOutboundLink = function(url) {
+       ga('send', 'event', 'outbound', 'click', url, {
+         'transport': 'beacon',
+         'hitCallback': function(){document.location = url;}
+       });
+    }
   </script>
  </head>
 <body>
@@ -110,7 +113,7 @@
 						</div>
 						<div class="card-action">
 						  <a class="white-text" href="tel:16619455541">CALL</a>
-						  <a class="white-text" target="_blank" href="http://www.boltsinthebathtub.com">WEBSITE</a>
+						  <a class="white-text" target="_blank" href="http://www.boltsinthebathtub.com" onclick="trackOutboundLink('http://www.boltsinthebathtub.com'); return false;">WEBSITE</a>
 						</div>
 					  </div>
 					</div>
@@ -125,7 +128,7 @@
 						</div>
 						<div class="card-action">
 						  <a class="white-text" href="tel:18052410061">CALL</a>
-						  <a class="white-text" target="_blank" href="http://www.cottonandchocolate.com">WEBSITE</a>
+						  <a class="white-text" target="_blank" href="http://www.cottonandchocolate.com" onclick="trackOutboundLink('http://www.cottonandchocolate.com'); return false;">WEBSITE</a>
 						</div>
 					  </div>
 					</div>
@@ -142,7 +145,7 @@
 						</div>
 						<div class="card-action">
 						  <a class="white-text" href="tel:18187048238">CALL</a>
-						  <a class="white-text" target="_blank" href="http://www.quiltemporium.com">WEBSITE</a>
+						  <a class="white-text" target="_blank" href="http://www.quiltemporium.com" onclick="trackOutboundLink('http://www.quiltemporium.com'); return false;">WEBSITE</a>
 						</div>
 					  </div>
 					</div>
@@ -157,7 +160,7 @@
 						</div>
 						<div class="card-action">
 						  <a class="white-text" href="tel:6268522223">CALL</a>
-						  <a class="white-text" target="_blank" href="http://www.thesewnsew.com">WEBSITE</a>
+						  <a class="white-text" target="_blank" href="http://www.thesewnsew.com" onclick="trackOutboundLink('http://www.thesewnsew.com'); return false;">WEBSITE</a>
 						</div>
 					  </div>
 					</div>
@@ -174,7 +177,7 @@
 						</div>
 						<div class="card-action">
 						  <a class="white-text" href="tel:9514795121">CALL</a>
-						  <a class="white-text" target="_blank" href="http://sewntogethernorco.squarespace.com/">WEBSITE</a>
+						  <a class="white-text" target="_blank" href="http://sewntogethernorco.squarespace.com/" onclick="trackOutboundLink('http://sewntogethernorco.squarespace.com/'); return false;">WEBSITE</a>
 						</div>
 					  </div>
 					</div>
@@ -189,7 +192,7 @@
 						</div>
 						<div class="card-action">
 						  <a class="white-text" href="tel:17146393245">CALL</a>
-						  <a class="white-text" target="_blank" href="http://www.orangequiltbee.com">WEBSITE</a>
+						  <a class="white-text" target="_blank" href="http://www.orangequiltbee.com" onclick="trackOutboundLink('http://www.orangequiltbee.com'); return false;">WEBSITE</a>
 						</div>
 					  </div>
 					</div>
@@ -206,7 +209,7 @@
 						</div>
 						<div class="card-action">
 						  <a class="white-text" href="tel:19513510346">CALL</a>
-						  <a class="white-text" target="_blank" href="http://www.quilterscocoon.com">WEBSITE</a>
+						  <a class="white-text" target="_blank" href="http://www.quilterscocoon.com" onclick="trackOutboundLink('http://www.quilterscocoon.com'); return false;">WEBSITE</a>
 						</div>
 					  </div>
 					</div>
@@ -221,7 +224,7 @@
 						</div>
 						<div class="card-action">
 						  <a class="white-text" href="tel:17608814025">CALL</a>
-						  <a class="white-text" target="_blank" href="http://www.topsandbobbins.com">WEBSITE</a>
+						  <a class="white-text" target="_blank" href="http://www.topsandbobbins.com" onclick="trackOutboundLink('http://www.topsandbobbins.com'); return false;">WEBSITE</a>
 						</div>
 					  </div>
 					</div>
@@ -238,7 +241,7 @@
 						</div>
 						<div class="card-action">
 						  <a class="white-text" href="tel:17603288737">CALL</a>
-						  <a class="white-text" target="_blank" href="http://www.thequiltersfaire.com">WEBSITE</a>
+						  <a class="white-text" target="_blank" href="http://www.thequiltersfaire.com" onclick="trackOutboundLink('http://www.thequiltersfaire.com'); return false;">WEBSITE</a>
 						</div>
 					  </div>
 					</div>
@@ -253,7 +256,7 @@
 						</div>
 						<div class="card-action">
 						  <a class="white-text" href="tel:17607722400">CALL</a>
-						  <a class="white-text" target="_blank" href="http://www.monicasquiltandbead.com">WEBSITE</a>
+						  <a class="white-text" target="_blank" href="http://www.monicasquiltandbead.com" onclick="trackOutboundLink('http://www.monicasquiltandbead.com'); return false;">WEBSITE</a>
 						</div>
 					  </div>
 					</div>
@@ -270,7 +273,7 @@
 						</div>
 						<div class="card-action">
 						  <a class="white-text" href="tel:17607233060">CALL</a>
-						  <a class="white-text" target="_blank" href="http://www.myquilterscottage.com">WEBSITE</a>
+						  <a class="white-text" target="_blank" href="http://www.myquilterscottage.com" onclick="trackOutboundLink('http://www.myquilterscottage.com'); return false;">WEBSITE</a>
 						</div>
 					  </div>
 					</div>
@@ -285,7 +288,7 @@
 						</div>
 						<div class="card-action">
 						  <a class="white-text" href="tel:17607588308">CALL</a>
-						  <a class="white-text" target="_blank" href="http://www.fatquartersquiltshop.com">WEBSITE</a>
+						  <a class="white-text" target="_blank" href="http://www.fatquartersquiltshop.com" onclick="trackOutboundLink('http://www.fatquartersquiltshop.com'); return false;">WEBSITE</a>
 						</div>
 					  </div>
 					</div>
@@ -302,7 +305,7 @@
 						</div>
 						<div class="card-action">
 						  <a class="white-text" href="tel:17605910929">CALL</a>
-						  <a class="white-text" target="_blank" href="http://www.quiltinaday.com">WEBSITE</a>
+						  <a class="white-text" target="_blank" href="http://www.quiltinaday.com" onclick="trackOutboundLink('http://www.quiltinaday.com'); return false;">WEBSITE</a>
 						</div>
 					  </div>
 					</div>
@@ -317,7 +320,7 @@
 						</div>
 						<div class="card-action">
 						  <a class="white-text" href="tel:17607519400">CALL</a>
-						  <a class="white-text" target="_blank" href="http://www.inspired2quilt.com">WEBSITE</a>
+						  <a class="white-text" target="_blank" href="http://www.inspired2quilt.com" onclick="trackOutboundLink('http://www.inspired2quilt.com'); return false;">WEBSITE</a>
 						</div>
 					  </div>
 					</div>
@@ -334,7 +337,7 @@
 						</div>
 						<div class="card-action">
 						  <a class="white-text" href="tel:16195622288">CALL</a>
-						  <a class="white-text" target="_blank" href="http://www.memorylanequiltshop.com">WEBSITE</a>
+						  <a class="white-text" target="_blank" href="http://www.memorylanequiltshop.com" onclick="trackOutboundLink('http://www.memorylanequiltshop.com'); return false;">WEBSITE</a>
 						</div>
 					  </div>
 					</div>
@@ -349,7 +352,7 @@
 						</div>
 						<div class="card-action">
 						  <a class="white-text" href="tel:16196700652">CALL</a>
-						  <a class="white-text" target="_blank" href="http://www.cozyquilt.com">WEBSITE</a>
+						  <a class="white-text" target="_blank" href="http://www.cozyquilt.com" onclick="trackOutboundLink('href="http://www.cozyquilt.com'); return false;">WEBSITE</a>
 						</div>
 					  </div>
 					</div>
@@ -361,7 +364,7 @@
 	<footer class="page-footer grey">
         <div class="footer-copyright">
             <div class="container">
-				<p class="left white-text">This website was made and is maintained by <a class="black-text" target="_blank" href="http://www.thequiltersfaire.com/">The Quilter's Faire</a>.</br>© 2017 The Quilter's Faire</p>
+				<p class="left white-text">This website was made and is maintained by <a class="black-text" target="_blank" href="http://www.thequiltersfaire.com/" onclick="trackOutboundLink('http://www.thequiltersfaire.com/'); return false;">The Quilter's Faire</a>.</br>© 2017 The Quilter's Faire</p>
 				<p class="right white-text"><a class="black-text" href="../quiltshops.html">Quilt Store owner looking to join?</a></p>
             </div>
         </div>

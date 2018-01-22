@@ -26,16 +26,19 @@
 
     gtag('config', 'UA-90328686-4');
   </script>
-  <!-- Hotjar Tracking Code for http://quiltersrun.com/ -->
   <script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:749050,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    /**
+    * Function that tracks a click on an outbound link in Analytics.
+    * This function takes a valid URL string as an argument, and uses that URL string
+    * as the event label. Setting the transport method to 'beacon' lets the hit be sent
+    * using 'navigator.sendBeacon' in browser that support it.
+    */
+    var trackOutboundLink = function(url) {
+       ga('send', 'event', 'outbound', 'click', url, {
+         'transport': 'beacon',
+         'hitCallback': function(){document.location = url;}
+       });
+    }
   </script>
   <script>
 	function introJs() {
@@ -132,7 +135,7 @@
 								<div class="card-content valign-wrapper" style="height: 125px;">
 									<center>
 										<img data-step="1" data-intro="Click any prize image to make it bigger, and then click again to close the image." src="../imgs/gprizes/alexanderhenry.jpg" width="100%" class="materialboxed" alt="Alexander Henry Fabrics">	
-										<a target="_blank" href="http://www.ahfabrics.com/"><img src="../imgs/sponsors/alexanderhenry.png" width="100%" class="sponsorlogo" alt="Alexander Henry Fabrics"></a>										
+										<a target="_blank" href="http://www.ahfabrics.com/" onclick="trackOutboundLink('http://www.ahfabrics.com/'); return false;"><img src="../imgs/sponsors/alexanderhenry.png" width="100%" class="sponsorlogo" alt="Alexander Henry Fabrics"></a>										
 									</center>
 								</div>
 							</div>
@@ -142,7 +145,7 @@
 								<div class="card-content valign-wrapper" style="height: 125px;">
 									<center>
 										<img data-step="2" data-intro="Let's try another one." src="../imgs/gprizes/andover.jpg" width="75%" class="materialboxed" alt="Andover Fabrics">
-										<a target="_blank" href="http://www.andoverfabrics.com"><img src="../imgs/sponsors/andover.png" width="90%" class="sponsorlogo" alt="Andover Fabrics"></a>										
+										<a target="_blank" href="http://www.andoverfabrics.com" onclick="trackOutboundLink('http://www.andoverfabrics.com'); return false;"><img src="../imgs/sponsors/andover.png" width="90%" class="sponsorlogo" alt="Andover Fabrics"></a>										
 									</center>
 								</div>
 							</div>
@@ -152,13 +155,13 @@
 								<div class="card-content valign-wrapper" style="height: 125px;">
 									<center>
 										<img src="../imgs/gprizes/artgalleryfabrics.jpg" width="100%" class="materialboxed" alt="Art Gallery Fabrics">	
-										<a target="_blank" href="http://www.artgalleryfabrics.com/"><img src="../imgs/sponsors/artgalleryfabrics.png" width="90%" class="sponsorlogo" alt="Art Gallery Fabrics"></a>										
+										<a target="_blank" href="http://www.artgalleryfabrics.com/" onclick="trackOutboundLink('http://www.artgalleryfabrics.com/'); return false;"><img src="../imgs/sponsors/artgalleryfabrics.png" width="90%" class="sponsorlogo" alt="Art Gallery Fabrics"></a>										
 									</center>
 								</div>
 							</div>
 					</div>
 					<div class="col s12 m2">
-						<a target="_blank" href="http://www.benartex.com/">
+						<a target="_blank" href="http://www.benartex.com/" onclick="trackOutboundLink('http://www.benartex.com/'); return false;">
 							<div class="card-panel white">
 								<div class="card-content valign-wrapper" style="height: 125px;">
 									<center>
@@ -173,7 +176,7 @@
 								<div class="card-content valign-wrapper" style="height: 125px;">
 									<center>
 										<img src="../imgs/gprizes/camelot.jpg" width="50%" class="materialboxed" alt="Camelot Fabrics">
-										<a target="_blank" href="https://camelotfabrics.com/"><img src="../imgs/sponsors/camelotfabrics.jpg" width="80%" class="sponsorlogo" alt="Camelot Fabrics"></a>								
+										<a target="_blank" href="https://camelotfabrics.com/" onclick="trackOutboundLink('https://camelotfabrics.com/'); return false;"><img src="../imgs/sponsors/camelotfabrics.jpg" width="80%" class="sponsorlogo" alt="Camelot Fabrics"></a>								
 									</center>
 								</div>
 							</div>
@@ -182,7 +185,7 @@
 				<div class="row">
 					<div class="col s12 m1"></div>
 					<div class="col s12 m2">
-						<a target="_blank" href="http://www.freespiritfabrics.com/">
+						<a target="_blank" href="http://www.freespiritfabrics.com/" onclick="trackOutboundLink('http://www.freespiritfabrics.com/'); return false;">
 							<div class="card-panel white">
 								<div class="card-content valign-wrapper" style="height: 125px;">
 									<center>
@@ -193,7 +196,7 @@
 						</a>
 					</div>
 					<div class="col s12 m2">
-						<a target="_blank" href="http://www.hoffmanfabrics.com/">
+						<a target="_blank" href="http://www.hoffmanfabrics.com/" onclick="trackOutboundLink('http://www.hoffmanfabrics.com/'); return false;">
 							<div class="card-panel white">
 								<div class="card-content valign-wrapper" style="height: 125px;">
 									<center>
@@ -209,7 +212,7 @@
 								<div class="card-content valign-wrapper" style="height: 125px;">
 									<center>
 										<img src="../imgs/gprizes/inthebeginningfabrics.jpg" width="100%" class="materialboxed" alt="In The Beginning Fabrics">
-										</br><a target="_blank" href="http://www.inthebeginningfabrics.com/"><img src="../imgs/sponsors/inthebeginningfabrics.png" width="90%" class="sponsorlogo" alt="In The Beginning Fabrics"></a>			
+										</br><a target="_blank" href="http://www.inthebeginningfabrics.com/" onclick="trackOutboundLink('http://www.inthebeginningfabrics.com/'); return false;"><img src="../imgs/sponsors/inthebeginningfabrics.png" width="90%" class="sponsorlogo" alt="In The Beginning Fabrics"></a>			
 									</center>
 								</div>
 							</div>
@@ -219,7 +222,7 @@
 								<div class="card-content valign-wrapper" style="height: 125px;">
 									<center>
 										<img src="../imgs/gprizes/islandbatik.jpg" width="100%" class="materialboxed" alt="Island Batik">
-										</br><a target="_blank" href="http://www.islandbatik.com/"><img src="../imgs/sponsors/islandbatik.png" width="60%" class="sponsorlogo" alt="Island Batik"></a>									
+										</br><a target="_blank" href="http://www.islandbatik.com/" onclick="trackOutboundLink('http://www.islandbatik.com/'); return false;"><img src="../imgs/sponsors/islandbatik.png" width="60%" class="sponsorlogo" alt="Island Batik"></a>									
 									</center>
 								</div>
 							</div>
@@ -229,7 +232,7 @@
 								<div class="card-content valign-wrapper" style="height: 125px;">
 									<center>
 										<img src="../imgs/gprizes/marcus.jpg" width="100%" class="materialboxed" alt="Island Batik">
-										<a target="_blank" href="https://marcusfabrics.com/"><img src="../imgs/sponsors/marcusfabrics.png" width="90%" class="sponsorlogo" alt="Marcus Fabrics">
+										<a target="_blank" href="https://marcusfabrics.com/" onclick="trackOutboundLink('https://marcusfabrics.com/'); return false;"><img src="../imgs/sponsors/marcusfabrics.png" width="90%" class="sponsorlogo" alt="Marcus Fabrics">
 										<img src="../imgs/sponsors/studio_37.gif" width="50%" class="sponsorlogo" alt="Studio 36 Fabrics"></a>										
 									</center>
 								</div>
@@ -239,7 +242,7 @@
 				<div class="row">
 					<div class="col s12 m1"></div>
 					<div class="col s12 m2">
-						<a target="_blank" href="http://maywoodstudio.com/">
+						<a target="_blank" href="http://maywoodstudio.com/" onclick="trackOutboundLink('http://maywoodstudio.com/'); return false;">
 							<div class="card-panel white">
 								<div class="card-content valign-wrapper" style="height: 125px;">
 									<center>
@@ -254,7 +257,7 @@
 								<div class="card-content valign-wrapper" style="height: 125px;">
 									<center>
 										<img src="../imgs/gprizes/michaelmiller.jpg" width="100%" class="materialboxed" alt="Michael Miller Fabrics">
-										<a target="_blank" href="https://www.michaelmillerfabrics.com/"><img src="../imgs/sponsors/michaelmiller.png" width="90%" class="sponsorlogo" alt="Michael Miller Fabrics"></a>								
+										<a target="_blank" href="https://www.michaelmillerfabrics.com/" onclick="trackOutboundLink('https://www.michaelmillerfabrics.com/'); return false;"><img src="../imgs/sponsors/michaelmiller.png" width="90%" class="sponsorlogo" alt="Michael Miller Fabrics"></a>								
 									</center>
 								</div>
 							</div>
@@ -264,13 +267,13 @@
 								<div class="card-content valign-wrapper" style="height: 125px;">
 									<center>
 										<img src="../imgs/gprizes/moda.jpg" width="90%" class="materialboxed" alt="Moda Fabric">		
-										<a target="_blank" href="https://storefront.unitednotions.com/storefrontCommerce/"><img src="../imgs/sponsors/moda.png" width="90%" class="sponsorlogo" alt="Moda Fabric"></a>									
+										<a target="_blank" href="https://storefront.unitednotions.com/storefrontCommerce/" onclick="trackOutboundLink('https://storefront.unitednotions.com/storefrontCommerce/'); return false;"><img src="../imgs/sponsors/moda.png" width="90%" class="sponsorlogo" alt="Moda Fabric"></a>									
 									</center>
 								</div>
 							</div>
 					</div>
 					<div class="col s12 m2">
-						<a target="_blank" href="http://www.northcott.net/">
+						<a target="_blank" href="http://www.northcott.net/" onclick="trackOutboundLink('http://www.northcott.net/'); return false;">
 							<div class="card-panel white">
 								<div class="card-content valign-wrapper" style="height: 125px;">
 									<center>
@@ -281,7 +284,7 @@
 						</a>
 					</div>
 					<div class="col s12 m2">
-						<a target="_blank" href="https://pbsfabrics.com/">
+						<a target="_blank" href="https://pbsfabrics.com/" onclick="trackOutboundLink('https://pbsfabrics.com/'); return false;">
 							<div class="card-panel white">
 								<div class="card-content valign-wrapper" style="height: 125px;">
 									<center>
@@ -299,13 +302,13 @@
 								<div class="card-content valign-wrapper" style="height: 125px;">
 									<center>
 										<img src="../imgs/gprizes/quiltingtreasures.jpg" width="75%" class="materialboxed" alt="Quilting Treasures">
-										<a target="_blank" href="http://www.quiltingtreasures.com/"><img src="../imgs/sponsors/quiltingtreasures.png" width="90%" class="sponsorlogo" alt="Quilting Treasures"></a>								
+										<a target="_blank" href="http://www.quiltingtreasures.com/" onclick="trackOutboundLink('http://www.quiltingtreasures.com/'); return false;"><img src="../imgs/sponsors/quiltingtreasures.png" width="90%" class="sponsorlogo" alt="Quilting Treasures"></a>								
 									</center>
 								</div>
 							</div>
 					</div>
 					<div class="col s12 m2">
-						<a target="_blank" href="https://www.rileyblakedesigns.com/">
+						<a target="_blank" href="https://www.rileyblakedesigns.com/" onclick="trackOutboundLink('https://www.rileyblakedesigns.com/'); return false;">
 							<div class="card-panel white">
 								<div class="card-content valign-wrapper" style="height: 125px;">
 									<center>
@@ -320,7 +323,7 @@
 								<div class="card-content valign-wrapper" style="height: 125px;">
 									<center>
 										<img src="../imgs/gprizes/robertkaufman.jpg" width="90%" class="materialboxed" alt="Robert Kaufman">	
-										<a target="_blank" href="http://www.robertkaufman.com/"><img src="../imgs/sponsors/robertkaufman.gif" width="90%" class="sponsorlogo" alt="Robert Kaufman">	</a>									
+										<a target="_blank" href="http://www.robertkaufman.com/" onclick="trackOutboundLink('http://www.robertkaufman.com/'); return false;"><img src="../imgs/sponsors/robertkaufman.gif" width="90%" class="sponsorlogo" alt="Robert Kaufman">	</a>									
 									</center>
 								</div>
 							</div>
@@ -329,13 +332,13 @@
 							<div class="card-panel white">
 								<div class="card-content valign-wrapper" style="height: 125px;">
 									<center>
-										<a target="_blank" href="http://www.midwest-textiles.com/">River’s Bend</br>by	Midwest Textiles</a>									
+										<a target="_blank" href="http://www.midwest-textiles.com/" onclick="trackOutboundLink('http://www.midwest-textiles.com/'); return false;">River’s Bend</br>by	Midwest Textiles</a>									
 									</center>
 								</div>
 							</div>
 					</div>
 					<div class="col s12 m2">
-						<a target="_blank" href="http://www.shannonfabrics.com/">
+						<a target="_blank" href="http://www.shannonfabrics.com/" onclick="trackOutboundLink('http://www.shannonfabrics.com/'); return false;">
 							<div class="card-panel white">
 								<div class="card-content valign-wrapper" style="height: 125px;">
 									<center>
@@ -349,7 +352,7 @@
 				<div class="row">
 					<div class="col s12 m4"></div>
 					<div class="col s12 m2">
-						<a target="_blank" href="http://www.sweetbeedesigns.com/">
+						<a target="_blank" href="http://www.sweetbeedesigns.com/" onclick="trackOutboundLink('http://www.sweetbeedesigns.com/'); return false;">
 							<div class="card-panel white">
 								<div class="card-content valign-wrapper" style="height: 125px;">
 									<center>
@@ -364,7 +367,7 @@
 								<div class="card-content valign-wrapper" style="height: 125px;">
 									<center>
 										<img src="../imgs/gprizes/timeless.jpg" width="75%" class="materialboxed" alt="Timeless Treasures">
-										<a target="_blank" href="https://ttfabrics.com/"><img src="../imgs/sponsors/timelesstreasures.png" width="90%" class="sponsorlogo" alt="Timeless Treasures"></a>									
+										<a target="_blank" href="https://ttfabrics.com/" onclick="trackOutboundLink('https://ttfabrics.com/'); return false;"><img src="../imgs/sponsors/timelesstreasures.png" width="90%" class="sponsorlogo" alt="Timeless Treasures"></a>									
 									</center>
 								</div>
 							</div>
@@ -468,147 +471,147 @@
 					</center>
 				</div>				
 					<div class="col s12 m12">
-						<a target="_blank" href="http://www.ahfabrics.com/">
+						<a target="_blank" href="http://www.ahfabrics.com/" onclick="trackOutboundLink('http://www.ahfabrics.com/'); return false;">
 							<div class="card-panel white">
 								<p class="center-align custom-black-text" style="font-size: 24px;">Alexander Henry Fabrics</p>
 							</div>
 						</a>
 					</div>
 					<div class="col s12 m12">
-						<a target="_blank" href="http://www.andoverfabrics.com">
+						<a target="_blank" href="http://www.andoverfabrics.com" onclick="trackOutboundLink('http://www.andoverfabrics.com'); return false;">
 							<div class="card-panel white">
 								<p class="center-align custom-black-text" style="font-size: 24px;">Andover Fabrics</p>
 							</div>
 						</a>
 					</div>
 					<div class="col s12 m12">
-						<a target="_blank" href="http://www.artgalleryfabrics.com/">
+						<a target="_blank" href="http://www.artgalleryfabrics.com/" onclick="trackOutboundLink('http://www.artgalleryfabrics.com/'); return false;">
 							<div class="card-panel white">
 								<p class="center-align custom-black-text" style="font-size: 24px;">Art Gallery Fabrics</p>
 							</div>
 						</a>
 					</div>
 					<div class="col s12 m12">
-						<a target="_blank" href="http://www.benartex.com/">
+						<a target="_blank" href="http://www.benartex.com/" onclick="trackOutboundLink('http://www.benartex.com/'); return false;">
 							<div class="card-panel white">
 								<p class="center-align custom-black-text" style="font-size: 24px;">Benartex</p>
 							</div>
 						</a>
 					</div>
 					<div class="col s12 m12">
-						<a target="_blank" href="https://camelotfabrics.com/">
+						<a target="_blank" href="https://camelotfabrics.com/" onclick="trackOutboundLink('https://camelotfabrics.com/'); return false;">
 							<div class="card-panel white">
 								<p class="center-align custom-black-text" style="font-size: 24px;">Camelot Fabrics</p>
 							</div>
 						</a>
 					</div>
 					<div class="col s12 m12">
-						<a target="_blank" href="http://www.freespiritfabrics.com/">
+						<a target="_blank" href="http://www.freespiritfabrics.com/" onclick="trackOutboundLink('http://www.freespiritfabrics.com/'); return false;">
 							<div class="card-panel white">
 								<p class="center-align custom-black-text" style="font-size: 24px;">Free Spirit Fabrics</p>
 							</div>
 						</a>
 					</div>
 					<div class="col s12 m12">
-						<a target="_blank" href="http://www.hoffmanfabrics.com/">
+						<a target="_blank" href="http://www.hoffmanfabrics.com/" onclick="trackOutboundLink('http://www.hoffmanfabrics.com/'); return false;">
 							<div class="card-panel white">
 								<p class="center-align custom-black-text" style="font-size: 24px;">Hoffman Fabrics</p>
 							</div>
 						</a>
 					</div>
 					<div class="col s12 m12">
-						<a target="_blank" href="http://www.inthebeginningfabrics.com/">
+						<a target="_blank" href="http://www.inthebeginningfabrics.com/" onclick="trackOutboundLink('http://www.inthebeginningfabrics.com/'); return false;">
 							<div class="card-panel white">
 								<p class="center-align custom-black-text" style="font-size: 24px;">In The Beginning Fabrics</p>
 							</div>
 						</a>
 					</div>
 					<div class="col s12 m12">
-						<a target="_blank" href="http://www.islandbatik.com/">
+						<a target="_blank" href="http://www.islandbatik.com/" onclick="trackOutboundLink('http://www.islandbatik.com/'); return false;">
 							<div class="card-panel white">
 								<p class="center-align custom-black-text" style="font-size: 24px;">Island Batik</p>
 							</div>
 						</a>
 					</div>
 					<div class="col s12 m12">
-						<a target="_blank" href="https://marcusfabrics.com/">
+						<a target="_blank" href="https://marcusfabrics.com/" onclick="trackOutboundLink('https://marcusfabrics.com/'); return false;">
 							<div class="card-panel white">
 								<p class="center-align custom-black-text" style="font-size: 24px;">Studio 36 Fabrics by Marcus Fabrics</p>
 							</div>
 						</a>
 					</div>
 					<div class="col s12 m12">
-						<a target="_blank" href="http://maywoodstudio.com/">
+						<a target="_blank" href="http://maywoodstudio.com/" onclick="trackOutboundLink('http://maywoodstudio.com/'); return false;">
 							<div class="card-panel white">
 								<p class="center-align custom-black-text" style="font-size: 24px;">Maywood Studio</p>
 							</div>
 						</a>
 					</div>
 					<div class="col s12 m12">
-						<a target="_blank" href="https://storefront.unitednotions.com/storefrontCommerce/">
+						<a target="_blank" href="https://storefront.unitednotions.com/storefrontCommerce/" onclick="trackOutboundLink('https://storefront.unitednotions.com/storefrontCommerce/'); return false;">
 							<div class="card-panel white">
 								<p class="center-align custom-black-text" style="font-size: 24px;">Moda Fabric</p>
 							</div>
 						</a>
 					</div>
 					<div class="col s12 m12">
-						<a target="_blank" href="http://www.northcott.net/">
+						<a target="_blank" href="http://www.northcott.net/" onclick="trackOutboundLink('http://www.northcott.net/'); return false;">
 							<div class="card-panel white">
 								<p class="center-align custom-black-text" style="font-size: 24px;">Northcott</p>
 							</div>
 						</a>
 					</div>
 					<div class="col s12 m12">
-						<a target="_blank" href="https://pbsfabrics.com/">
+						<a target="_blank" href="https://pbsfabrics.com/" onclick="trackOutboundLink('https://pbsfabrics.com/'); return false;">
 							<div class="card-panel white">
 								<p class="center-align custom-black-text" style="font-size: 24px;">Paintbrush</p>
 							</div>
 						</a>
 					</div>
 					<div class="col s12 m12">
-						<a target="_blank" href="http://www.quiltingtreasures.com/">
+						<a target="_blank" href="http://www.quiltingtreasures.com/" onclick="trackOutboundLink('http://www.quiltingtreasures.com/'); return false;">
 							<div class="card-panel white">
 								<p class="center-align custom-black-text" style="font-size: 24px;">Quilting Treasures</p>
 							</div>
 						</a>
 					</div>
 					<div class="col s12 m12">
-						<a target="_blank" href="">
+						<a target="_blank" href="" onclick="trackOutboundLink(''); return false;">
 							<div class="card-panel white">
 								<p class="center-align custom-black-text" style="font-size: 24px;">Riley Blake Designs</p>
 							</div>
 						</a>
 					</div>
 					<div class="col s12 m12">
-						<a target="_blank" href="http://www.robertkaufman.com/">
+						<a target="_blank" href="http://www.robertkaufman.com/" onclick="trackOutboundLink('http://www.robertkaufman.com/'); return false;">
 							<div class="card-panel white">
 								<p class="center-align custom-black-text" style="font-size: 24px;">Robert Kaufman</p>
 							</div>
 						</a>
 					</div>
 					<div class="col s12 m12">
-						<a target="_blank" href="http://www.midwest-textiles.com/">
+						<a target="_blank" href="http://www.midwest-textiles.com/" onclick="trackOutboundLink('http://www.midwest-textiles.com/'); return false;">
 							<div class="card-panel white">
 								<p class="center-align custom-black-text" style="font-size: 24px;">River’s Bend by	Midwest Textiles</p>
 							</div>
 						</a>
 					</div>
 					<div class="col s12 m12">
-						<a target="_blank" href="http://www.shannonfabrics.com/">
+						<a target="_blank" href="http://www.shannonfabrics.com/" onclick="trackOutboundLink('http://www.shannonfabrics.com/'); return false;">
 							<div class="card-panel white">
 								<p class="center-align custom-black-text" style="font-size: 24px;">Shannon Fabrics</p>
 							</div>
 						</a>
 					</div>
 					<div class="col s12 m12">
-						<a target="_blank" href="http://www.sweetbeedesigns.com/">
+						<a target="_blank" href="http://www.sweetbeedesigns.com/" onclick="trackOutboundLink('http://www.sweetbeedesigns.com/'); return false;">
 							<div class="card-panel white">
 								<p class="center-align custom-black-text" style="font-size: 24px;">Sweet Bee Designs</p>
 							</div>
 						</a>
 					</div>
 					<div class="col s12 m12">
-						<a target="_blank" href="https://ttfabrics.com/">
+						<a target="_blank" href="https://ttfabrics.com/" onclick="trackOutboundLink('https://ttfabrics.com/'); return false;">
 							<div class="card-panel white">
 								<p class="center-align custom-black-text" style="font-size: 24px;">Timeless Treasures</p>
 							</div>
@@ -688,7 +691,7 @@
 	<footer class="page-footer grey">
         <div class="footer-copyright">
             <div class="container">
-				<p class="left white-text">This website was made and is maintained by <a class="black-text" target="_blank" href="http://www.thequiltersfaire.com/">The Quilter's Faire</a>.</br>© 2017 The Quilter's Faire</p>
+				<p class="left white-text">This website was made and is maintained by <a class="black-text" target="_blank" href="http://www.thequiltersfaire.com/" onclick="trackOutboundLink('http://www.thequiltersfaire.com/'); return false;">The Quilter's Faire</a>.</br>© 2017 The Quilter's Faire</p>
 				<p class="right white-text"><a class="black-text" href="../quiltshops.html">Quilt Store owner looking to join?</a></p>
             </div>
         </div>
