@@ -26,19 +26,16 @@
 
     gtag('config', 'UA-90328686-4');
   </script>
+  <!-- Hotjar Tracking Code for http://quiltersrun.com/ -->
   <script>
-    /**
-    * Function that tracks a click on an outbound link in Analytics.
-    * This function takes a valid URL string as an argument, and uses that URL string
-    * as the event label. Setting the transport method to 'beacon' lets the hit be sent
-    * using 'navigator.sendBeacon' in browser that support it.
-    */
-    var trackOutboundLink = function(url) {
-       ga('send', 'event', 'outbound', 'click', url, {
-         'transport': 'beacon',
-         'hitCallback': function(){document.location = url;}
-       });
-    }
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:749050,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
   </script>
  </head>
 <body>
@@ -135,7 +132,7 @@
 	<footer class="page-footer grey">
         <div class="footer-copyright">
             <div class="container">
-				<p class="left white-text">This website was made and is maintained by <a class="black-text" target="_blank" href="http://www.thequiltersfaire.com/" onclick="trackOutboundLink('http://www.thequiltersfaire.com/'); return false;">The Quilter's Faire</a>.</br>© 2017 The Quilter's Faire</p>
+				<p class="left white-text">This website was made and is maintained by <a class="black-text" target="_blank" href="http://www.thequiltersfaire.com/">The Quilter's Faire</a>.</br>© 2017 The Quilter's Faire</p>
 				<p class="right white-text"><a class="black-text" href="../quiltshops.html">Quilt Store owner looking to join?</a></p>
             </div>
         </div>
