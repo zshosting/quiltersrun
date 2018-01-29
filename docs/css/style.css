@@ -11,6 +11,19 @@
   padding: 0 10px !important;
 }
 
+h3 {
+    font-size: 1.6rem;
+	color: #f61d72;
+    line-height: 110%;
+    margin: 1.14rem 0 .912rem 0;
+}
+
+h4 {
+    font-size: 1.4rem;
+    line-height: 110%;
+    margin: 1.14rem 0 .912rem 0;
+}
+
 body {
         background: url('../imgs/background.png') no-repeat center #111111; background-attachment:fixed;
     }
